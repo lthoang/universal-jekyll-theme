@@ -2,8 +2,8 @@ title: Universal
 email: hello@universal.com
 phone: +420 777 555 333
 description: ""
-baseurl: ""
-url: ""
+baseurl: "/universal-jekyll-theme"
+url: "https://lthoang.github.io"
 
 # Build settings
 markdown: kramdown
