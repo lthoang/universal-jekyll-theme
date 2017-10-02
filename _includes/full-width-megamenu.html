@@ -1,0 +1,24 @@
+<li class="dropdown use-yamm yamm-fw">
+  {% assign menu = include.menu %}
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">{{ menu[0] }} <b class="caret"></b></a>
+  <ul class="dropdown-menu">
+    <li>
+      <div class="yamm-content">
+        <div class="row">
+          {% for menu_column in menu[1].sub %}
+          <div class="col-sm-3">
+            {% for submenu in menu_column %}
+            <h5>{{ submenu[0] }}</h5>
+            <ul>
+              {% for item in submenu[1] %}
+              <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </li>
+  </ul>
+</li>

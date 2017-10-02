@@ -1,0 +1,36 @@
+<div id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-5 contact">
+        <p class="hidden-sm hidden-xs">Contact us on {{ site.phone }} or {{ site.email }}.</p>
+        <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a> <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+        </p>
+      </div>
+      <div class="col-xs-7">
+        {% if site.social %}
+        <div class="social">
+          {% if site.social.facebook %}
+          <a href="https://www.facebook.com/{{ site.social.facebook }}" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
+          {% endif %}
+          {% if site.social.gplus %}
+          <a href="https://plus.google.com/{{ site.social.gplus }}" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
+          {% endif %}
+          {% if site.social.twitter %}
+          <a href="https://twitter.com/{{ site.social.twitter }}" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
+          {% endif %}
+          {% if site.social.email %}
+          <a href="mailto:{{ site.social.email }}" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if site.login %}
+        <div class="login">
+          <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
+          <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

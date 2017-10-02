@@ -1,0 +1,131 @@
+title: Universal
+email: hello@universal.com
+phone: +420 777 555 333
+description: ""
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+menu:
+  Home:
+    type: dropdown
+    sub:
+      "Option 1: Default Page": /
+      "Option 2: Application": /index2
+      "Option 3: Startup": /index3
+      "Option 4: Agency": /index4
+      "Option 5: Portfolio": /index5
+  Features:
+    type: half-megamenu
+    img: /assets/img/template-easy-customize.png
+    sub:
+      - 
+        Shortcodes:
+          ACCORDIONS: '#'
+          ALERTS: '#'
+          BUTTONS: '#'
+          CONTENT BOXES: '#'
+          HORIZONTAL BLOCKS: '#'
+          PAGINATION: '#'
+          TABS: '#'
+          TYPOGRAPHY: '#'
+      - 
+        Header variations:
+          DEFAULT STICKY HEADER: '#'
+          NO STICKY HEADER: '#'
+          LIGHT HEADER: '#'
+  Portfolio:
+    type: half-megamenu
+    img: /assets/img/template-homepage.png
+    sub:
+      - 
+        Portfolio:
+          2 COLUMNS: '#'
+          2 COLUMNS WITH NEGATIVE SPACE: '#'
+          3 COLUMNS: '#'
+          3 COLUMNS WITH NEGATIVE SPACE: '#'
+          4 COLUMNS: '#'
+          4 COLUMNS WITH NEGATIVE SPACE: '#'
+          PORTFOLIO - DETAIL: '#'
+          PORTFOLIO - DETAIL 2: '#'
+      -
+        About:
+          ABOUT US: '#'
+          OUR TEAM: '#'
+          TEAM MEMBER: '#'
+          SERVICES: '#'
+        MARKETING:
+          PACKAGES: '#'
+  All pages:
+    type: megamenu
+    sub:
+      -
+        HOME:
+          "Option 1: Default Page": /
+          "Option 2: Application": /index2
+          "Option 3: Startup": /index3
+          "Option 4: Agency": /index4
+          "Option 5: Portfolio": /index5
+        About:
+          ABOUT US: '#'
+          OUR TEAM: '#'
+          TEAM MEMBER: '#'
+          SERVICES: '#'
+        MARKETING:
+          PACKAGES: '#'
+
+      - 
+        Portfolio:
+          2 COLUMNS: '#'
+          2 COLUMNS WITH NEGATIVE SPACE: '#'
+          3 COLUMNS: '#'
+          3 COLUMNS WITH NEGATIVE SPACE: '#'
+          4 COLUMNS: '#'
+          4 COLUMNS WITH NEGATIVE SPACE: '#'
+          PORTFOLIO - DETAIL: '#'
+          PORTFOLIO - DETAIL 2: '#'
+        USER PAGES:
+          REGISTER / LOGIN: '#'
+          ORDERS HISTORY: '#'
+          ORDER HISTORY DETAIL: '#'
+          WISHLIST: '#'
+          CUSTOMER ACCOUNT / CHANGE PASSWORD: '#'
+      -
+        SHOP:
+          CATEGORY - SIDEBAR RIGHT: '#'
+          CATEGORY - SIDEBAR LEFT: '#'
+          CATEGORY - FULL WIDTH: '#'
+          PRODUCT DETAIL: '#'
+        SHOP - ORDER PROCESS:
+          SHOPPING CART: '#'
+          CHECKOUT - STEP 1: '#'
+          CHECKOUT - STEP 2: '#'
+          CHECKOUT - STEP 3: '#'
+          CHECKOUT - STEP 4: '#'
+      - 
+        CONTACT:
+          CONTACT: '#'
+          CONTACT - VERSION 2: '#'
+          CONTACT - VERSION 3: '#'
+        PAGES:
+          TEXT PAGE: '#'
+          TEXT PAGE - LEFT SIDEBAR: '#'
+          TEXT PAGE - FULL WIDTH: '#'
+          FAQ: '#'
+          404 PAGE: '#'
+        BLOG:
+          BLOG LISTING BIG: '#'
+          BLOG LISTING MEDIUM: '#'
+          BLOG LISTING SMALL: '#'
+          BLOG POST: '#'
+  Contact:
+    type: dropdown
+    sub:
+      Contact option 1: /contact
+      Contact option 2: /contact2
+      Contact option 3: /contact3
+    

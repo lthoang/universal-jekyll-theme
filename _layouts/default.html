@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+{% include head.html %}
+<body>
+  <div id="all">
+    {% include header.html %}
+    {% if site.login %}{% include login-modal.html %}{% endif %}
+    <main>
+      {{ content }}
+    </main>
+    {% if site.get_it %}{% include get-it.html %}{% endif %}
+    {% include footer.html %}
+    {% include copyright.html %}
+    {% include js.html %}
+  </div>
+</body>
+</html>

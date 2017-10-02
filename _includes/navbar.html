@@ -1,0 +1,34 @@
+<div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+  <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand home" href="{{ "/" | relative_url }}">
+          <img src="{% link /assets/img/logo.png %}" alt="{{ site.title }} logo" class="hidden-xs hidden-sm">
+          <img src="{% link /assets/img/logo-small.png %}" alt="{{ site.title }} logo" class="visible-xs visible-sm">
+          <span class="sr-only">{{ site.title }} - go to homepage</span>
+        </a>
+        <div class="navbar-buttons">
+          <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-align-justify"></i>
+          </button>
+        </div>
+      </div>
+      <div class="navbar-collapse collapse" id="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          {% for item in site.menu %}
+            {% if item[1].type == 'dropdown' %}
+              {% include dropdown-menu.html menu = item %}
+            {% elsif item[1].type == 'megamenu' %}
+              {% include full-width-megamenu.html menu = item %}
+            {% elsif item[1].type == 'half-megamenu' %}
+              {% include half-width-megamenu.html menu = item %}
+            {% else %}
+            <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
