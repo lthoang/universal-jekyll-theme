@@ -1,0 +1,15 @@
+<h4>Featured posts</h4>
+<div class="blog-entries">
+  {% assign posts = include.posts | sort: 'date' | reverse %}
+  {% for post in posts limit:3 %}
+  <div class="item same-height-row clearfix">
+    <div class="image same-height-always">
+      <a href="{{ post.url | relative_url }}"><img class="img-responsive" src="{{ post.thumbnail | relative_url }}" alt="{{ post.title | escape }}"></a>
+    </div>
+    <div class="name same-height-always">
+      <h5><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<hr class="hidden-md hidden-lg">
