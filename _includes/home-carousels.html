@@ -1,0 +1,30 @@
+<section>
+  <div class="home-carousel">
+    <div class="dark-mask"></div>
+    <div class="container">
+      <div class="homepage owl-carousel">
+        {% for item in include.carousels %}
+        <div class="item">
+          <div class="row">
+            {% if item.position == 'right' %}
+            <div class="col-sm-5 right">
+              {{ item.description }}
+            </div>
+            <div class="col-sm-7 text-center">
+              <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
+            </div>
+            {% else %}
+            <div class="col-sm-7 text-center">
+              <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
+            </div>
+            <div class="col-sm-5">
+              {{ item.description }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

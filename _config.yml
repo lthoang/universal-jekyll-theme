@@ -138,4 +138,5 @@ menu:
       Contact option 3: /contact3
 
 collections:
+  - carousels
   - photostream
