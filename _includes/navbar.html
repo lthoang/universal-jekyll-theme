@@ -18,11 +18,11 @@
         <ul class="nav navbar-nav navbar-right">
           {% for item in site.menu %}
             {% if item[1].type == 'dropdown' %}
-              {% include dropdown-menu.html menu = item %}
+              {% include navbar/dropdown-menu.html menu = item %}
             {% elsif item[1].type == 'megamenu' %}
-              {% include full-width-megamenu.html menu = item %}
+              {% include navbar/full-width-megamenu.html menu = item %}
             {% elsif item[1].type == 'half-megamenu' %}
-              {% include half-width-megamenu.html menu = item %}
+              {% include navbar/half-width-megamenu.html menu = item %}
             {% else %}
             <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
             {% endif %}
