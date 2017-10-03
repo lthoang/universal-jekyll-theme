@@ -1,6 +1,14 @@
 title: Universal
 email: hello@universal.com
 phone: +420 777 555 333
+address: >-
+  <strong>Universal Ltd.</strong>
+        <br>13/25 New Avenue
+        <br>Newtown upon River
+        <br>45Y 73J
+        <br>England
+        <br>
+        <strong>Great Britain</strong>
 description: ""
 baseurl: "/universal-jekyll-theme"
 url: "https://lthoang.github.io"
