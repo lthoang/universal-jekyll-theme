@@ -1,0 +1,8 @@
+<h4>Photostream</h4>
+<div class="photostream">  
+  {% for photo in include.photos limit:12 %}
+  <div>
+    <a href="{{ photo.url | relative_url }}"><img src="{{ photo.img | relative_url }}" class="img-responsive" alt="{{ photo.title | escape }}"></a>
+  </div>
+  {% endfor %}
+</div>

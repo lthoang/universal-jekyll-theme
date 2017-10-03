@@ -128,4 +128,6 @@ menu:
       Contact option 1: /contact
       Contact option 2: /contact2
       Contact option 3: /contact3
-    
+
+collections:
+  - photostream

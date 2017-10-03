@@ -58,42 +58,7 @@
 
 
     <div class="col-md-3 col-sm-6">
-
-      <h4>Photostream</h4>
-
-      <div class="photostream">
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare2.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare3.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare3.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare2.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-        <div>
-          <a href="#">
-                        <img src="img/detailsquare.jpg" class="img-responsive" alt="#">
-                    </a>
-        </div>
-      </div>
-
+      {% include footer/photostream.html photos = site.photostream %}
     </div>
   </div>
 </footer>
