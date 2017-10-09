@@ -1,0 +1,33 @@
+{% assign testimonials = include.testimonials %}
+<section class="bar background-pentagon no-mb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading text-center">
+          <h2>{{ testimonials.title }}</h2>
+        </div>
+        <p class="lead">{{ testimonials.lead }}</p>
+        <ul class="owl-carousel testimonials same-height-row">
+          {% for item in testimonials.items %}
+          <li class="item">
+            <div class="testimonial same-height-always">
+              <div class="text">
+                <p>{{ item.text }}</p>
+              </div>
+              <div class="bottom">
+                <div class="icon"><i class="fa fa-quote-left"></i>
+                </div>
+                <div class="name-picture">
+                  <img class="" alt="" src="{{ item.name-picture.img | relative_url }}">
+                  <h5>{{ item.name-picture.name }}</h5>
+                  <p>{{ item.name-picture.job }}</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
