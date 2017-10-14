@@ -1,8 +1,21 @@
 <section class="bar background-white">
   <div class="container">
     <div class="col-md-12">
+      {% assign services_count = include.services.size %}
+      {% assign row_count = services_count | divided_by: 3 %}
+      {% assign max_count = row_count | times: 3 %}
+      {% if max_count < services_count %}
+      {% assign row_count = row_count | plus: 1 %}
+      {% endif %}
+      {% assign begin_i = 0 %}
+      {% for r in (1..row_count) %}
       <div class="row">
-        {% for item in include.services %}
+        {% assign end_i = begin_i | plus: 2 %}
+        {% if services_count < end_i %}
+        {% assign end_i = services_count %}
+        {% endif %}
+        {% for i in (begin_i..end_i) %}
+        {% assign item = include.services[i] %}
         <div class="col-md-4">
           <div class="box-simple">
             <div class="icon">
@@ -12,8 +25,10 @@
             <p>{{ item.description }}</p>
           </div>
         </div>
+        {% assign begin_i = begin_i | plus: 1 %}
         {% endfor %}
       </div>
+      {% endfor %}
     </div>
   </div>
 </section>
