@@ -1,0 +1,8 @@
+<div class="archive-group">
+  <h3>All posts</h3>
+  {% for post in site.posts %}
+  <article class="archive-item">
+    <h4><a href="{% include link.html link = post.url %}"><span>{{ post.date | date: "%Y-%m-%d" }}</span> {{ post.title }}</a></h4>
+  </article>
+  {% endfor %}
+</div>
