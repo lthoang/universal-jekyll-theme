@@ -12,6 +12,7 @@ address: >-
 description: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
 baseurl: "/universal-jekyll-theme"
 url: "https://lthoang.github.io"
+permalink: /:title
 
 # Build settings
 markdown: kramdown
