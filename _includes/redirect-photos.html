@@ -1,0 +1,18 @@
+<section class="bar background-gray no-mb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="heading text-center">
+          <h2>{{ include.photos.title }}</h2>
+        </div>
+        <ul class="owl-carousel customers">
+          {% for photo in include.photos.items %}
+          <li class="item">
+            <a href="{{ photo.url }}"><img src="{{ photo.img | relative_url }}" alt="" class="img-responsive"></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
