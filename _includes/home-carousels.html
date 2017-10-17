@@ -8,7 +8,7 @@
           <div class="row">
             {% if item.position == 'right' %}
             <div class="col-sm-5 right">
-              {{ item.description }}
+              {{ item.content }}
             </div>
             <div class="col-sm-7 text-center">
               <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
@@ -18,7 +18,7 @@
               <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
             </div>
             <div class="col-sm-5">
-              {{ item.description }}
+              {{ item.content }}
             </div>
             {% endif %}
           </div>
