@@ -18,7 +18,7 @@
                 <div class="icon"><i class="fa fa-quote-left"></i>
                 </div>
                 <div class="name-picture">
-                  <img class="" alt="" src="{{ item.name-picture.img | relative_url }}">
+                  <img class="" alt="" src="{% include link.html link = item.name-picture.img %}">
                   <h5>{{ item.name-picture.name }}</h5>
                   <p>{{ item.name-picture.job }}</p>
                 </div>

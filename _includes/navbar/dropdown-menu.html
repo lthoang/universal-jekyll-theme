@@ -3,7 +3,8 @@
   <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">{{ menu[0] }} <b class="caret"></b></a>
   <ul class="dropdown-menu">
     {% for item in menu[1].sub %}
-    <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+    {% capture url %}{{ item[1] }}{% endcapture %}
+    <li><a href="{% include link.html link = url %}">{{ item[0] }}</a></li>
     {% endfor %}
   </ul>
 </li>

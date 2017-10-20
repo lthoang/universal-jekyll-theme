@@ -6,7 +6,8 @@
       <div class="yamm-content">
         <div class="row">
           <div class="col-sm-6">
-            <img src="{{ menu[1].img | relative_url }}" class="img-responsive hidden-xs" alt="">
+              {% capture img_src %}{{ menu[1].img }}{% endcapture %}
+            <img src="{% include link.html link = img_src %}" class="img-responsive hidden-xs" alt="">
           </div>
           {% for menu_column in menu[1].sub %}
           <div class="col-sm-3">
@@ -14,7 +15,8 @@
             <h5>{{ submenu[0] }}</h5>
             <ul>
               {% for item in submenu[1] %}
-              <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+              {% capture url %}{{ item[1] }}{% endcapture %}
+              <li><a href="{% include link.html link = url %}">{{ item[0] }}</a></li>
               {% endfor %}
             </ul>
             {% endfor %}

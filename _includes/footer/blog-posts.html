@@ -4,10 +4,10 @@
   {% for post in posts limit:3 %}
   <div class="item same-height-row clearfix">
     <div class="image same-height-always">
-      <a href="{{ post.url | relative_url }}"><img class="img-responsive" src="{{ post.thumbnail | relative_url }}" alt="{{ post.title | escape }}"></a>
+      <a href="{% include link.html link = post.url %}"><img class="img-responsive" src="{% include link.html link = post.thumbnail %}" alt="{{ post.title | escape }}"></a>
     </div>
     <div class="name same-height-always">
-      <h5><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h5>
+      <h5><a href="{% include link.html link = post.url %}">{{ post.title }}</a></h5>
     </div>
   </div>
   {% endfor %}

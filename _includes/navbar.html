@@ -2,9 +2,9 @@
   <div class="navbar navbar-default yamm" role="navigation" id="navbar">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand home" href="{{ "/" | relative_url }}">
-          <img src="{{ "/assets/img/logo.png" | relative_url }}" alt="{{ site.title }} logo" class="hidden-xs hidden-sm">
-          <img src="{{ "/assets/img/logo-small.png" | relative_url }}" alt="{{ site.title }} logo" class="visible-xs visible-sm">
+        <a class="navbar-brand home" href="{% include link.html link = "/" %}">
+          <img src="{% include link.html link = "/assets/img/logo.png" %}" alt="{{ site.title }} logo" class="hidden-xs hidden-sm">
+          <img src="{% include link.html link = "/assets/img/logo-small.png" %}" alt="{{ site.title }} logo" class="visible-xs visible-sm">
           <span class="sr-only">{{ site.title }} - go to homepage</span>
         </a>
         <div class="navbar-buttons">
@@ -24,7 +24,8 @@
             {% elsif item[1].type == 'half-megamenu' %}
               {% include navbar/half-width-megamenu.html menu = item %}
             {% else %}
-            <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+            {% capture url %}{{ item[1] }}{% endcapture %}
+            <li><a href="{% include link.html link = url %}">{{ item[0] }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>

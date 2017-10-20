@@ -21,6 +21,8 @@ plugins:
 
 google_analytics: UA-70844403-1
 
+login: enabled
+
 menu:
   Home:
     type: dropdown
@@ -129,9 +131,9 @@ menu:
           FAQ: '#'
           404 PAGE: '#'
         BLOG:
-          BLOG LISTING BIG: '#'
-          BLOG LISTING MEDIUM: '#'
-          BLOG LISTING SMALL: '#'
+          BLOG LISTING BIG: '/blog-listing-lg/'
+          BLOG LISTING MEDIUM: '/blog-listing/'
+          BLOG LISTING SMALL: '/blog-listing-sm/'
           BLOG POST: '#'
   Contact:
     type: dropdown

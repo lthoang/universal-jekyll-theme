@@ -11,11 +11,11 @@
               {{ item.content }}
             </div>
             <div class="col-sm-7 text-center">
-              <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
+              <img class="img-responsive" src="{% include link.html link = item.img %}" alt="{{ item.alt | escape }}">
             </div>
             {% else %}
             <div class="col-sm-7 text-center">
-              <img class="img-responsive" src="{{ item.img | relative_url }}" alt="{{ item.alt | escape }}">
+              <img class="img-responsive" src="{% include link.html link = item.img %}" alt="{{ item.alt | escape }}">
             </div>
             <div class="col-sm-5">
               {{ item.content }}

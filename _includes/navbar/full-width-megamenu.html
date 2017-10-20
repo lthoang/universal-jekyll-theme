@@ -11,7 +11,8 @@
             <h5>{{ submenu[0] }}</h5>
             <ul>
               {% for item in submenu[1] %}
-              <li><a href="{{ item[1] }}">{{ item[0] }}</a></li>
+              {% capture url %}{{ item[1] }}{% endcapture %}
+              <li><a href="{% include link.html link = url %}">{{ item[0] }}</a></li>
               {% endfor %}
             </ul>
             {% endfor %}

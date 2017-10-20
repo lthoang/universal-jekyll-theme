@@ -8,7 +8,7 @@
         <ul class="owl-carousel customers">
           {% for photo in include.photos.items %}
           <li class="item">
-            <a href="{{ photo.url }}"><img src="{{ photo.img | relative_url }}" alt="" class="img-responsive"></a>
+            <a href="{% include link.html link = photo.url %}"><img src="{% include link.html link = photo.img %}" alt="" class="img-responsive"></a>
           </li>
           {% endfor %}
         </ul>
