@@ -1,24 +1,9 @@
 ---
-layout: default
+layout: blog
 ---
-{% include post/heading.html %}
-<div id="content">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        {% include post/info.html %}
-        {% include post/lead.html %}
-        {{ content }}
-        {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
-        {% endif %}
-      </div>
-      <div class="col-md-3">
-        {% include sidebar/text-widget.html %}
-        {% include sidebar/search.html %}
-        {% include sidebar/categories.html %}
-        {% include sidebar/tags.html %}
-      </div>
-    </div>
-  </div>
-</div>
+{% include post/info.html %}
+{% include post/lead.html %}
+{{ content }}
+{% if site.disqus.shortname %}
+{% include disqus_comments.html %}
+{% endif %}
