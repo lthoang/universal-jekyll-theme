@@ -1,0 +1,30 @@
+<div class="row">
+  {% for post in site.posts %}
+  <div class="col-md-4 col-sm-6">
+    <div class="box-image-text blog">
+      <div class="top">
+        <div class="image">
+          <img src="{% include link.html link = post.thumbnail %}" class="img-responsive" alt="{{ post.title | escape }}">
+        </div>
+        <div class="bg"></div>
+        <div class="text">
+          <p class="buttons">
+            <a href="{% include link.html link = post.url %}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
+          </p>
+        </div>
+      </div>
+      <div class="content">
+        <h4><a href="{% include link.html link = post.url %}">{{ post.title }}</a></h4>
+        {% capture category_name %}{{ post.categories | first }}{% endcapture %}
+        {% assign category_id = category_name | slugify %}
+        {% assign category_url = "/archives/#category-" | append: category_id %}
+        <p class="author-category">By <a href="#">{{ post.author | default: "Anonymous" }}</a> in <a href="{% include link.html link = category_url %}">{{ category_name }}</a>
+        </p>
+        <p class="intro">{{ post.lead | default: post.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
+        <p class="read-more"><a href="{% include link.html link = post.url %}" class="btn btn-template-main">Continue reading</a></p>
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
