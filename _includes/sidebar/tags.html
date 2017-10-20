@@ -1,0 +1,15 @@
+<div class="panel sidebar-menu">
+  <div class="panel-heading">
+    <h3 class="panel-title">Tags</h3>
+  </div>
+  <div class="panel-body">
+    <ul class="tag-cloud">
+      {% for tag in site.tags %}
+      {% capture tag_name %}{{ tag | first }}{% endcapture %}
+      {% assign id = tag_name | slugify %}
+      {% assign url = "/archives/#tag-" | append: id %}
+      <li><a href="{% include link.html link = url %}"><i class="fa fa-tags"></i> {{ tag_name }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
