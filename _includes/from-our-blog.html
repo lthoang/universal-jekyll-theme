@@ -14,21 +14,21 @@
           <div class="box-image-text blog">
             <div class="top">
               <div class="image">
-                <img src="{{ post.thumbnail | relative_url }}" alt="" class="img-responsive">
+                <img src="{% include link.html link = post.thumbnail %}" alt="" class="img-responsive">
               </div>
               <div class="bg"></div>
               <div class="text">
                 <p class="buttons">
-                  <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
+                  <a href="{% include link.html link = post.url %}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
                 </p>
               </div>
             </div>
             <div class="content">
-              <h4><a href="blog-post.html">{{ post.title }}</a></h4>
+              <h4><a href="{% include link.html link = post.url %}">{{ post.title }}</a></h4>
               <p class="author-category">By <a href="#">{{ post.author | default: "Anonymous" }}</a> in <a href="blog.html">{{ post.categories[0] }}</a>
               </p>
-              <p class="intro">{{ post.lede | default: post.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
-              <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
+              <p class="intro">{{ post.lead | default: post.excerpt | strip_html | normalize_whitespace | truncate: 160 | escape }}</p>
+              <p class="read-more"><a href="{% include link.html link = post.url %}" class="btn btn-template-main">Continue reading</a>
               </p>
             </div>
           </div>

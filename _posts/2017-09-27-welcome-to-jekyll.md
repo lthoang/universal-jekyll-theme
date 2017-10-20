@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 author: Jekyll
-lede: You’ll find this post in your `_posts` directory.
+lead: You’ll find this post in your `_posts` directory.
 thumbnail: /assets/img/portfolio-6.jpg
 date:   2017-09-27 15:18:18 +0700
 categories: jekyll update
